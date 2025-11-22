@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="ISO-8859-1" />
+    <title>WebGL 3D Texture Mapping Example</title>
+
+    <script src="glMatrix-0.9.5.min.js" type="text/javascript"></script>
+    <script src="Shadow.js" type="text/javascript"></script>
+
+    <style>
+      body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #fff;
+      }
+      canvas {
+        border: none;
+      }
+      .sliders {
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+
+  <body onload="webGLStart()">
+    <canvas id="Shadow" width="800" height="800"></canvas>
+
+    <div class="sliders">
+      <label for="LightSlider">Control Light Position:</label>
+      <input
+        id="LightSlider"
+        type="range"
+        min="-15"
+        max="15"
+        value="3"
+        autocomplete="on"
+      />
+    </div>
+
+    <label>
+      <input id="animationToggle" type="checkbox" />
+      Animate
+    </label>
+  </body>
+</html>
+
