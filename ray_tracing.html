@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ray Tracing</title>
+    <script type="text/javascript" src="ray_tracing.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            text-align: center;
+            padding: 0px;
+        }
+
+        #RayTracing {
+            margin-top: 0px;
+            border-radius: 2px;
+        }
+
+        p {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 14px;
+            margin: 5px;
+            color: #000000;
+            background-color: #edf7ce;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .sliders label {
+            font-size: 16px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .sliders input[type="range"] {
+            width: 300px;
+            accent-color: #000000;
+        }
+    </style>
+</head>
+<body onload="webGLStart();">
+    <canvas id="RayTracing" width="600" height="600"></canvas>
+    <p>Shading Mode:</p>
+    <div>
+        <button onclick="setChoice(1)">Phong</button>
+        <button onclick="setChoice(2)">Phong + Reflection</button>
+        <button onclick="setChoice(3)">Phong + Shadow</button>
+        <button onclick="setChoice(4)">Phong + Shadow + Reflection</button>
+    </div>
+
+    <div class="sliders">
+        <label for="LightSlider">Move Light:</label>
+        <input type="range" min="-10.0" max="10.0" value="-5.0" id="LightSlider" />
+    </div>
+</body>
+</html>
